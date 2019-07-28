@@ -48,10 +48,34 @@ h2
 .header
 	padding-top: 10px
 	padding-bottom: 280px
-	background-image: url(../img/header--bg.png)
+	background-image: url(../img/header--bg.jpg)
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
+
+	&__container
+		position: relative
+
+	&__button
+		position: absolute
+		left: -150px
+		bottom: 10%
+		transform: rotate(-90deg)
+		text-transform: uppercase
+		color: #8b8c8f
+		letter-spacing: 3px
+		transition: all .6s
+		cursor: pointer
+
+		img
+			margin-right: 25px
+			transform: rotate(90deg)
+
+		&:hover,
+		&:focus
+			bottom: 5%
+			color: #8b8c8f
+
 
 	&__logo
 		margin-bottom: 175px
@@ -168,7 +192,7 @@ h2
 
 	&__list
 		display: flex
-		justify-content: space-between
+		justify-content: space-around
 		flex-wrap: wrap
 
 	&__item
@@ -202,10 +226,16 @@ h2
 
 	&__slide
 		position: relative
+		opacity: 0 !important
+
+	.swiper-slide-active
+		opacity: 1 !important
 
 	&__img
 		display: block
 		margin-left: auto
+		max-width: 100%
+		max-height: 720px
 
 	&__wrap
 		position: absolute
